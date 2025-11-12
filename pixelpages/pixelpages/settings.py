@@ -37,9 +37,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'book',
+    'user',
+    'corsheaders',
+    'rest_framework',
 ]
 
+AUTH_USER_MODEL = "user.PixelUser"
+
 MIDDLEWARE = [
+    'cors.middleware.CORSMiddlleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
